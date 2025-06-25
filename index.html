@@ -1,36 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Build The Tower</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; }
-    #tower { margin: 20px auto; width: 100px; }
-    .floor { width: 100px; height: 20px; background: #444; margin-top: 2px; }
-    button { padding: 10px 20px; font-size: 16px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atalaya Workshop - Próximamente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffcc00;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 204, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+            position: relative;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ffcc00;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .loader {
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            border-top: 6px solid #ffcc00;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .tower-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-top: 20px;
+            position: relative;
+            height: 400px;
+        }
+        .tower {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .base {
+            width: 140px;
+            height: 60px;
+            background: #ffcc00;
+            border: 4px solid #77002e;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        .section {
+            width: 120px;
+            height: 50px;
+            background: repeating-linear-gradient(
+                45deg,
+                #ffcc00,
+                #ffcc00 10px,
+                #e6b800 10px,
+                #e6b800 20px
+            );
+            border: 3px solid #77002e;
+            position: relative;
+        }
+        .window {
+            width: 20px;
+            height: 20px;
+            background: #77002e;
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .top {
+            width: 130px;
+            height: 40px;
+            background: #ffcc00;
+            border: 3px solid #77002e;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .button-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 10px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #77002e;
+            color: #ffcc00;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        let tower = [];
+        const maxFloors = 6;
+
+        function buildTower() {
+            const towerContainer = document.getElementById("tower");
+            if (tower.length === 0) {
+                const base = document.createElement("div");
+                base.classList.add("base");
+                tower.push(base);
+                towerContainer.appendChild(base);
+            } else if (tower.length < maxFloors + 1) {
+                const newSection = document.createElement("div");
+                newSection.classList.add("section");
+                
+                if (Math.random() > 0.5) {
+                    const windowDiv = document.createElement("div");
+                    windowDiv.classList.add("window");
+                    newSection.appendChild(windowDiv);
+                }
+                
+                tower.push(newSection);
+                towerContainer.appendChild(newSection);
+            } else if (tower.length === maxFloors + 1) {
+                const top = document.createElement("div");
+                top.classList.add("top");
+                tower.push(top);
+                towerContainer.appendChild(top);
+            } else {
+                resetTower();
+            }
+        }
+        
+        function resetTower() {
+            const towerContainer = document.getElementById("tower");
+            towerContainer.innerHTML = "";
+            tower = [];
+        }
+    </script>
 </head>
 <body>
-  <h1>Build The Tower</h1>
-  <div id="tower"></div>
-  <button onclick="addFloor()">Add Floor</button>
-  <script>
-    let tower = document.getElementById("tower");
-    let floorCount = 0;
-
-    function addFloor() {
-      const floor = document.createElement("div");
-      floor.className = "floor";
-      tower.prepend(floor);
-      floorCount++;
-
-      // Random chance the tower collapses
-      if (Math.random() < 0.1 + (floorCount * 0.01)) {
-        alert("The tower collapsed at " + floorCount + " floors!");
-        tower.innerHTML = "";
-        floorCount = 0;
-      }
-    }
-  </script>
+    <div class="container">
+        <h1>Atalaya Workshop</h1>
+        <p>¡Estamos construyendo algo increíble!</p>
+        <div class="loader"></div>
+        <div class="tower-container">
+            <div id="tower" class="tower"></div>
+            <div class="button-container">
+                <button class="button" onclick="buildTower()">Construye con nosotros</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
