@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redirecting to Manual - Atalaya Workshop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #ffcc00;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255, 204, 0, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+    .loader {
+      border: 6px solid rgba(255, 255, 255, 0.3);
+      border-top: 6px solid #ffcc00;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    a {
+      color: #ffcc00;
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      // Redirect to the PDF file
+      window.location.href = "https://github.com/AtalayaWorkshop/atalayaworkshop.github.io/raw/main/manuals/dh_ptb_manual_v1/dh_ptb_manual_v1.pdf";
+    };
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Redirecting to the manual...</h1>
+    <div class="loader"></div>
+    <p>If the download doesn't start automatically, <a href="https://github.com/AtalayaWorkshop/atalayaworkshop.github.io/raw/main/manuals/dh_ptb_manual_v1/dh_ptb_manual_v1.pdf" download>click here to download the manual</a>.</p>
+  </div>
+</body>
+</html>
