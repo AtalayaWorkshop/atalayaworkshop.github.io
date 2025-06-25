@@ -1,1 +1,36 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Build The Tower</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; }
+    #tower { margin: 20px auto; width: 100px; }
+    .floor { width: 100px; height: 20px; background: #444; margin-top: 2px; }
+    button { padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Build The Tower</h1>
+  <div id="tower"></div>
+  <button onclick="addFloor()">Add Floor</button>
+  <script>
+    let tower = document.getElementById("tower");
+    let floorCount = 0;
+
+    function addFloor() {
+      const floor = document.createElement("div");
+      floor.className = "floor";
+      tower.prepend(floor);
+      floorCount++;
+
+      // Random chance the tower collapses
+      if (Math.random() < 0.1 + (floorCount * 0.01)) {
+        alert("The tower collapsed at " + floorCount + " floors!");
+        tower.innerHTML = "";
+        floorCount = 0;
+      }
+    }
+  </script>
+</body>
+</html>
