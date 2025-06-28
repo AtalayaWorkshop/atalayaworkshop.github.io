@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Atalaya Workshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #f8f8f8;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e6b800;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #222;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e6b800;
+    }
+
+    main {
+      flex: 1;
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #77002e;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    a.contact-link {
+      display: inline-block;
+      background-color: #e6b800;
+      color: #222;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    a.contact-link:hover {
+      background-color: #c1a300;
+    }
+
+    .social-links {
+      margin-top: 2rem;
+    }
+
+    .social-links a {
+      margin: 0 1rem;
+      color: #77002e;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #e6b800;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .social-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    }
+
+    .social-link {
+    color: #77002e;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+    }
+
+    .social-link .icon {
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    }
+
+    .social-link:hover {
+    color: #e6b800;
+    }
+
+    .social-link:hover .icon {
+    transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="assets/logo_atalaya_pin.png" alt="Atalaya Workshop Logo" /></a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="support.html">Support</a>
+      <a href="custom.html">Custom Orders</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Get in Touch</h1>
+    <p>
+      Have a question, custom order idea, or just want to say hello? We’d love to hear from you!
+    </p>
+
+    <a href="mailto:contact@atalayaworkshop.com" class="contact-link" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mail-icon" viewBox="0 0 24 24">
+        <path d="M4 4h16v16H4z" stroke="none"/>
+        <rect x="2" y="6" width="20" height="12" rx="2" ry="2" fill="none" stroke="#222" stroke-width="2"/>
+        <path d="M22 6l-10 7L2 6" fill="none" stroke="#222" stroke-width="2"/>
+    </svg>
+    Email Us
+    </a>
+
+    <div class="social-links" aria-label="Social media links" style="margin-top: 2rem; display: flex; justify-content: center; gap: 2rem;">
+    <a href="https://instagram.com/atalayaworkshop" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+        <circle cx="12" cy="12" r="10" stroke="#e6b800" stroke-width="2"/>
+        <path d="M16 11.37a4 4 0 1 1-7.999.001 4 4 0 0 1 7.999-.001z" stroke="#77002e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="#77002e"/>
+        </svg>
+        Instagram
+    </a>
+
+    <a href="https://www.tiktok.com/@atalayaworkshop" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-link">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+        <path d="M9 3v12.5a3.5 3.5 0 1 0 3.5 3.5V8h3.5V3h-7z" stroke="#e6b800" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M14 10V3" stroke="#77002e" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        TikTok
+    </a>
+
+    <a href="https://www.youtube.com/@atalayaworkshop/shorts" target="_blank" rel="noopener noreferrer" aria-label="YouTube Shorts" class="social-link">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+        <rect x="3" y="6" width="18" height="12" rx="3" stroke="#e6b800" stroke-width="2"/>
+        <path d="M10 9l5 3-5 3V9z" fill="#77002e"/>
+        </svg>
+        YouTube Shorts
+    </a>
+    </div>
+  </main>
+
+  <footer>
+    <!-- <p>&copy; 2025 Atalaya Workshop</p> -->
+  </footer>
+
+</body>
+</html>

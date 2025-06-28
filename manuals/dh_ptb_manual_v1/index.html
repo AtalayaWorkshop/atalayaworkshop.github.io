@@ -2,62 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Redirecting to Manual - Atalaya Workshop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redirecting to Manual | Atalaya Workshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #1a1a1a;
-      color: #ffcc00;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #77002e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       text-align: center;
-      padding: 50px;
+      padding: 0 1rem;
     }
     .container {
-      max-width: 800px;
-      margin: auto;
-      background: rgba(255, 204, 0, 0.1);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+      max-width: 600px;
+      border: 2px solid #e6b800;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 0 15px rgba(230, 184, 0, 0.4);
+      background-color: #fffbea;
     }
     h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
     }
     p {
-      font-size: 1.2em;
-      margin-top: 20px;
+      font-weight: 400;
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      color: #333;
     }
+    a {
+      color: #e6b800;
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #77002e;
+    }
+
+    /* Loader spinner */
     .loader {
-      border: 6px solid rgba(255, 255, 255, 0.3);
-      border-top: 6px solid #ffcc00;
-      border-radius: 50%;
+      margin: 1.8rem auto;
       width: 50px;
       height: 50px;
+      border: 6px solid #f0e68c33; /* light transparent */
+      border-top: 6px solid #e6b800;
+      border-radius: 50%;
       animation: spin 1s linear infinite;
-      margin: 20px auto;
     }
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-    a {
-      color: #ffcc00;
-      text-decoration: underline;
-    }
   </style>
   <script>
     window.onload = function() {
-      // Redirect to the PDF file
       window.location.href = "https://github.com/AtalayaWorkshop/atalayaworkshop.github.io/raw/main/manuals/dh_ptb_manual_v1/dh_ptb_manual_v1.pdf";
     };
   </script>
 </head>
 <body>
-  <div class="container">
-    <h1>Redirecting to the manual...</h1>
-    <div class="loader"></div>
-    <p>If the download doesn't start automatically, <a href="https://github.com/AtalayaWorkshop/atalayaworkshop.github.io/raw/main/manuals/dh_ptb_manual_v1/dh_ptb_manual_v1.pdf" download>click here to download the manual</a>.</p>
+  <div class="container" role="main" aria-live="polite" aria-busy="true">
+    <h1>Redirecting to your manual...</h1>
+    <div class="loader" aria-label="Loading spinner"></div>
+    <p>
+      If the download doesn't start automatically, 
+      <a href="https://github.com/AtalayaWorkshop/atalayaworkshop.github.io/raw/main/manuals/dh_ptb_manual_v1/dh_ptb_manual_v1.pdf" download>click here to download the manual</a>.
+    </p>
   </div>
 </body>
 </html>

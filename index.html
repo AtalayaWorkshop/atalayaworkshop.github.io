@@ -1,164 +1,203 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atalaya Workshop - Coming soon</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #ffcc00;
-            text-align: center;
-            padding: 50px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: rgba(255, 204, 0, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
-            position: relative;
-        }
-        h1 {
-            font-size: 2.5em;
-            color: #ffcc00;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        .loader {
-            border: 6px solid rgba(255, 255, 255, 0.3);
-            border-top: 6px solid #ffcc00;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .tower-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            margin-top: 20px;
-            position: relative;
-            height: 400px;
-        }
-        .tower {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .base {
-            width: 140px;
-            height: 60px;
-            background: #ffcc00;
-            border: 4px solid #77002e;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-        }
-        .section {
-            width: 120px;
-            height: 50px;
-            background: repeating-linear-gradient(
-                45deg,
-                #ffcc00,
-                #ffcc00 10px,
-                #e6b800 10px,
-                #e6b800 20px
-            );
-            border: 3px solid #77002e;
-            position: relative;
-        }
-        .window {
-            width: 20px;
-            height: 20px;
-            background: #77002e;
-            position: absolute;
-            top: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .top {
-            width: 130px;
-            height: 40px;
-            background: #ffcc00;
-            border: 3px solid #77002e;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-        .button-container {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin: 10px;
-        }
-        .button {
-            padding: 10px 20px;
-            font-size: 1.2em;
-            background-color: #77002e;
-            color: #ffcc00;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
-    <script>
-        let tower = [];
-        const maxFloors = 6;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atalaya Workshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #ffffff;
+      color: #222;
+    }
 
-        function buildTower() {
-            const towerContainer = document.getElementById("tower");
-            if (tower.length === 0) {
-                const base = document.createElement("div");
-                base.classList.add("base");
-                tower.push(base);
-                towerContainer.appendChild(base);
-            } else if (tower.length < maxFloors + 1) {
-                const newSection = document.createElement("div");
-                newSection.classList.add("section");
-                
-                if (Math.random() > 0.5) {
-                    const windowDiv = document.createElement("div");
-                    windowDiv.classList.add("window");
-                    newSection.appendChild(windowDiv);
-                }
-                
-                tower.push(newSection);
-                towerContainer.appendChild(newSection);
-            } else if (tower.length === maxFloors + 1) {
-                const top = document.createElement("div");
-                top.classList.add("top");
-                tower.push(top);
-                towerContainer.appendChild(top);
-            } else {
-                resetTower();
-            }
-        }
-        
-        function resetTower() {
-            const towerContainer = document.getElementById("tower");
-            towerContainer.innerHTML = "";
-            tower = [];
-        }
-    </script>
+    header {
+      background-color: #f8f8f8;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e6b800;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #77002e;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #222;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e6b800;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: #fff;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #77002e;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
+    .cta-button {
+      background-color: #e6b800;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #cc9f00;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #77002e;
+      margin-bottom: 2rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: #f8f8f8;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      width: 250px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 1rem;
+      color: #222;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .socials a {
+      margin: 0 1rem;
+      color: #e6b800;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Atalaya Workshop</h1>
-        <p>We are building some amazing stuff!</p>
-        <div class="loader"></div>
-        <div class="tower-container">
-            <div id="tower" class="tower"></div>
-            <div class="button-container">
-                <button class="button" onclick="buildTower()">Build with us</button>
-            </div>
-        </div>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">Atalaya
+        <img src="assets/logo_atalaya_pin.png" alt="Atalaya Workshop Logo" style="height: 40px;">
     </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="support.html">Support</a>
+      <a href="custom.html">Custom Orders</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="assets/logo_atalaya_pin.png" alt="Atalaya Logo" style="height: 100px; margin-bottom: 1rem;">
+    <h1>Three Spanish aerospace nerds building things</h1>
+    <p>Explore unique creations from 3D prints to electronics – designed, built, and imagined in-house at Atalaya Workshop.</p>
+    <button class="cta-button" onclick="location.href='products.html'">Browse Products</button>
+  </section>
+
+  <!-- What We Make -->
+  <section class="section">
+    <h2>What We Make</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="assets/logo_atalaya_pin.png" alt="3D Printing" style="width:100%; border-radius: 0.5rem;">
+        <h3>3D Printed Art</h3>
+        <p>Functional, decorative, and custom designs – expertly printed.</p>
+      </div>
+      <div class="card">
+        <img src="assets/logo_atalaya_pin.png" alt="Electronics" style="width:100%; border-radius: 0.5rem;">
+        <h3>Electronics & Gadgets</h3>
+        <p>From blinking LEDs to controller-driven creations.</p>
+      </div>
+      <div class="card">
+        <img src="assets/logo_atalaya_pin.png" alt="Handmade" style="width:100%; border-radius: 0.5rem;">
+        <h3>Crafted Pieces</h3>
+        <p>Blending tradition and tech in handmade works.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Orders -->
+  <section class="section" style="background-color:#fff8e1;">
+    <h2>Looking for Something Unique?</h2>
+    <p style="max-width: 600px; margin: auto;">We specialize in custom creations! Whether it's a gift, prototype, or passion project, we’re here to help bring it to life.</p>
+    <br>
+    <button class="cta-button" onclick="location.href='custom.html'">Start a Custom Order</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <!-- <p>&copy; 2025 Atalaya Workshop</p> -->
+    <div class="socials">
+      <a href="https://instagram.com/atalayaworkshop/" target="_blank">Instagram</a>
+      <a href="https://tiktok.com/@atalayaworkshop" target="_blank">TikTok</a>
+      <a href="https://youtube.com/@AtalayaWorkshop" target="_blank">YouTube</a>
+    </div>
+  </footer>
+
 </body>
 </html>

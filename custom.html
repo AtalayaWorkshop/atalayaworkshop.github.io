@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Orders | Atalaya Workshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #f8f8f8;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e6b800;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #222;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e6b800;
+    }
+
+    main {
+      flex: 1;
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #77002e;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p.intro {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-buttons {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    a.contact-link {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+      padding: 1rem 2rem;
+      background-color: #e6b800;
+      color: #222;
+      font-weight: 700;
+      border-radius: 0.8rem;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    a.contact-link:hover {
+      background-color: #cc9f00;
+    }
+
+    section.skills, section.guide {
+      margin-bottom: 3rem;
+    }
+
+    section.skills h2,
+    section.guide h2 {
+      color: #77002e;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skills-list li {
+      background-color: #f8f8f8;
+      border: 2px solid #e6b800;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      font-weight: 600;
+      min-width: 140px;
+      text-align: center;
+      color: #222;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .skills-list li:hover {
+      background-color: #e6b800;
+      color: #222;
+      border-color: #77002e;
+      cursor: default;
+    }
+
+    .guide-list {
+      max-width: 700px;
+      margin: 0 auto;
+      padding-left: 1.1rem;
+      line-height: 1.6;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .guide-list li {
+      margin-bottom: 0.9rem;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="assets/logo_atalaya_pin.png" alt="Atalaya Workshop Logo"></a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="support.html">Support</a>
+      <a href="custom.html">Custom Orders</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Custom Orders</h1>
+    <p class="intro">Got an idea for a custom product? Reach out to us — we’d love to collaborate! Here’s how we can help, and how to get the best results.</p>
+
+    <div class="contact-buttons">
+      <a href="mailto:contact@atalayaworkshop.com" class="contact-link">Send Us an Email</a>
+      <a href="https://instagram.com/atalayaworkshop" target="_blank" class="contact-link">Message on Instagram</a>
+    </div>
+
+    <section class="skills">
+      <h2>Our Skills & Expertise</h2>
+      <ul class="skills-list">
+        <li>3D Printing & Prototyping</li>
+        <li>Electronics & Embedded Systems</li>
+        <li>Custom Enclosure Design</li>
+        <li>Creative Product Styling</li>
+        <li>Rapid Iteration & Testing</li>
+      </ul>
+    </section>
+
+    <section class="guide">
+      <h2>How to Describe Your Idea</h2>
+      <ul class="guide-list">
+        <li><strong>Purpose:</strong> What will the product do or solve?</li>
+        <li><strong>Features:</strong> Any special functions, lights, shapes, or colors?</li>
+        <li><strong>Size & Materials:</strong> Rough dimensions or materials you prefer.</li>
+        <li><strong>References:</strong> Photos, sketches, or links to similar products.</li>
+        <li><strong>Deadline & Budget:</strong> If you have timing or budget constraints.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <!-- <p>&copy; 2025 Atalaya Workshop</p> -->
+  </footer>
+
+</body>
+</html>

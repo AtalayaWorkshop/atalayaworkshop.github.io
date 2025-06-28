@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Atalaya Workshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #f8f8f8;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e6b800;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #222;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e6b800;
+    }
+
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    h1 {
+      color: #77002e;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .mission p, .story p, .values ul {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .values ul {
+      list-style: disc inside;
+      padding-left: 1rem;
+      color: #222;
+      font-weight: 600;
+    }
+
+    /* Team photos */
+    .team {
+      text-align: center;
+    }
+
+    .team h2 {
+      color: #77002e;
+      margin-bottom: 1.2rem;
+    }
+
+    .team-photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .team-photos img {
+      border-radius: 1rem;
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .team-photos img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Timeline */
+    .timeline {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 2rem;
+      border-left: 3px solid #e6b800;
+    }
+
+    .timeline-item {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -11px;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      background-color: #77002e;
+      border-radius: 50%;
+      border: 3px solid #e6b800;
+    }
+
+    .timeline-item h3 {
+      margin: 0 0 0.3rem 0;
+      color: #77002e;
+      font-weight: 600;
+    }
+
+    .timeline-item p {
+      margin: 0;
+      color: #333;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="assets/logo_atalaya_pin.png" alt="Atalaya Workshop Logo" /></a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="support.html">Support</a>
+      <a href="custom.html">Custom Orders</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About Atalaya Workshop</h1>
+
+    <section class="mission">
+      <h2>Our Mission</h2>
+      <p>
+        At Atalaya Workshop, we blend creativity, technology, and craftsmanship to bring unique handmade products to life. Our mission is to deliver innovative, high-quality items that inspire and delight our customers.
+      </p>
+    </section>
+
+    <section class="story">
+      <h2>Our Story</h2>
+      <p>
+        Founded in 2023, Atalaya Workshop started as a small passion project combining 3D printing, electronics, and design. Since then, we’ve grown into a dedicated team that thrives on transforming ideas into tangible, functional art.
+      </p>
+    </section>
+
+    <section class="values">
+      <h2>Our Core Values</h2>
+      <ul>
+        <li>Innovation through craftsmanship</li>
+        <li>Customer collaboration and satisfaction</li>
+        <li>Attention to detail and quality</li>
+        <li>Sustainability and responsible materials</li>
+        <li>Continuous learning and improvement</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- <p>&copy; 2025 Atalaya Workshop</p> -->
+  </footer>
+
+</body>
+</html>
