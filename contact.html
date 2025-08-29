@@ -7,30 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #fff;
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #f8f8f8;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #e6b800;
-    }
-
-    .logo img {
-      height: 40px;
-    }
-
     nav a {
       margin-left: 1.5rem;
       text-decoration: none;
@@ -54,12 +30,6 @@
     h1 {
       color: #77002e;
       margin-bottom: 1.5rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      color: #333;
     }
 
     a.contact-link {
@@ -141,14 +111,9 @@
     </div>
   </main>
 
-  <div id="footer"></div>
-  <script>
-    fetch("footer.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("footer").innerHTML = data;
-      });
-  </script>
+  <footer>
+    <p>&copy; 2025 Atalaya Workshop</p>
+  </footer>
 
 </body>
 </html>
