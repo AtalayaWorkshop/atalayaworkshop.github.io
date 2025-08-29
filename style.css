@@ -39,6 +39,27 @@ nav a:hover {
     color: #e6b800;
 }
 
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 0.5rem;
+  }
+}
+
 footer {
     background-color: #222;
     color: white;
