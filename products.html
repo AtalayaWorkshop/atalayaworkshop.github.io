@@ -33,6 +33,27 @@
       transition: transform 0.3s;
     }
 
+    .product-card-coming-soon {
+      background-color: #f8f8f8;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: transform 0.3s;
+      opacity: 0.5;
+      filter: grayscale(50%);
+    }
+
+    .product-card-coming-soon:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card-coming-soon img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-bottom: 2px solid #e6b800;
+    }
+
     .product-buttons {
       display: flex;
       justify-content: center;
@@ -131,8 +152,45 @@
         </div>
       </div>
 
-      <!-- Custom Litophany Cube -->
+      <!-- Hexagonal Display with Magnetic Cover -->
       <div class="product-card">
+        <img src="assets/hexd.jpg" alt="Hexagonal Display with Magnetic Cover">
+        <div class="product-content">
+          <h3>Hexagonal Display with Magnetic Cover</h3>
+          <p>Modular display to showcase your figures (D&D, Funko, Lego) and protect them from dust.</p>
+          <div class="product-buttons">
+            <a href="https://atalayaworkshop.myshopify.com/products/hexagonal-display-for-figures-with-magnetic-lid-anti-dust-d-d-mini-funko-lego" target="_blank" class="product-button">Get yours now here</a>
+            <a href="https://www.etsy.com/listing/4395928731" target="_blank" class="product-button-lower">Alternative on Etsy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item Card compatible with Daggerheart -->
+      <div class="product-card-coming-soon">
+        <img src="assets/dh_ic.jpg" alt="Item Card compatible with Daggerheart">
+        <div class="product-content">
+          <h3>Item Card compatible with Daggerheart</h3>
+          <p>Obtain and display your loot and its features with customizable cards.</p>
+          <div class="product-buttons">
+            <a target="_blank" class="product-button">Coming soon!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Condition Rings compatible with Daggerheart -->
+      <div class="product-card-coming-soon">
+        <img src="assets/dh_cr.png" alt="Condition Rings compatible with Daggerheart">
+        <div class="product-content">
+          <h3>Condition Rings compatible with Daggerheart</h3>
+          <p>Flag your minis with elegant Rings for all conditions existing in the Daggerheart Manual.</p>
+          <div class="product-buttons">
+            <a target="_blank" class="product-button">Coming soon!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Litophany Cube -->
+      <div class="product-card-coming-soon">
         <img src="assets/litophany_cube.jpg" alt="Custom Litophany Cube">
         <div class="product-content">
           <h3>Custom Litophany Cube</h3>
