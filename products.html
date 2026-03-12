@@ -86,32 +86,63 @@
       font-size: 0.95rem;
       color: #555;
     }
-
-    .product-button {
+    
+    .product-button-primary {
       margin-top: 1rem;
-      padding: 0.5rem 1rem;
+      padding: 0.4rem 1rem;
       background-color: #e6b800;
       color: white;
       border: none;
       font-weight: bold;
-      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      border-radius: 0.7rem;
       cursor: pointer;
-      transition: background 0.3s;
+      box-shadow: 0 4px 10px rgba(230, 184, 0, 0.35);
+      transition: background 0.25s, transform 0.12s, box-shadow 0.12s;
     }
 
-    .product-button-lower {
+    .product-button-primary:hover {
+      background-color: #cc9f00;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(230, 184, 0, 0.45);
+    }
+
+    .product-button-primary:active {
+      transform: translateY(0px);
+      box-shadow: 0 3px 6px rgba(230, 184, 0, 0.3);
+    }
+
+    .product-button-digital {
       margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #e6b8009f;
+      padding: 0.6rem 1.1rem;
+      background-color: #77002e;
       color: white;
       border: none;
-      border-radius: 0.5rem;
+      font-weight: 600;
+      border-radius: 0.6rem;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background 0.25s, transform 0.1s;
     }
 
-    .product-button:hover {
-      background-color: #cc9f00;
+    .product-button-digital:hover {
+      background-color: #5a0023;
+      transform: translateY(-1px);
+    }
+
+    .product-button-etsy {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: transparent;
+      color: #e6b800;
+      border: 2px solid #e6b800;
+      border-radius: 0.6rem;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s;
+    }
+
+    .product-button-etsy:hover {
+      background-color: #e6b800;
+      color: white;
     }
   </style>
 </head>
@@ -146,8 +177,9 @@
           <h3>Player Tracker Board compatible with Daggerheart</h3>
           <p>One board to hold everything you need to play Daggerheart.</p>
           <div class="product-buttons">
-            <a href="https://www.etsy.com/listing/4327878070" target="_blank" class="product-button">Get yours on Etsy</a>
-            <a href="https://atalayaworkshop.myshopify.com/products/daggerheart%E2%84%A2-compatible-player-tracker-board-stl-3d-printing" target="_blank" class="product-button-lower">Models for 3D Printing</a>
+            <a href="https://www.etsy.com/listing/4327878070" target="_blank" class="product-button-primary">Get yours now here!</a>
+            <a href="https://atalayaworkshop.myshopify.com/products/daggerheart%E2%84%A2-compatible-player-tracker-board-stl-3d-printing" target="_blank" class="product-button-digital">Models for 3D Printing</a>
+            <a href="https://www.etsy.com/listing/4327878070" target="_blank" class="product-button-etsy">See on Etsy</a>
           </div>
         </div>
       </div>
@@ -159,8 +191,9 @@
           <h3>Hexagonal Display with Magnetic Cover</h3>
           <p>Modular display to showcase your figures (D&D, Funko, Lego) and protect them from dust.</p>
           <div class="product-buttons">
-            <a href="https://atalayaworkshop.myshopify.com/products/hexagonal-display-for-figures-with-magnetic-lid-anti-dust-d-d-mini-funko-lego" target="_blank" class="product-button">Get yours now here</a>
-            <a href="https://www.etsy.com/listing/4395928731" target="_blank" class="product-button-lower">Alternative on Etsy</a>
+            <a href="https://atalayaworkshop.myshopify.com/products/hexagonal-display-for-figures-with-magnetic-lid-anti-dust-d-d-mini-funko-lego" target="_blank" class="product-button-primary">Get yours now here!</a>
+            <a target="_blank" class="product-button-digital">Models for 3D Printing</a>
+            <a href="https://www.etsy.com/listing/4395928731" target="_blank" class="product-button-etsy">See on Etsy</a>
           </div>
         </div>
       </div>
@@ -172,7 +205,9 @@
           <h3>Item Card compatible with Daggerheart</h3>
           <p>Obtain and display your loot and its features with customizable cards.</p>
           <div class="product-buttons">
-            <a href="https://www.etsy.com/listing/4413171685" target="_blank" class="product-button">Get yours on Etsy</a>
+            <a href="https://www.etsy.com/listing/4413171685" target="_blank" class="product-button-primary">Get yours now here!</a>
+            <a target="_blank" class="product-button-digital">Models for 3D Printing</a>
+            <a href="https://www.etsy.com/listing/4413171685" target="_blank" class="product-button-etsy">See on Etsy</a>
           </div>
         </div>
       </div>
@@ -184,8 +219,9 @@
           <h3>Condition Rings compatible with Daggerheart</h3>
           <p>Flag your minis with elegant Rings for all conditions existing in the Daggerheart Manual.</p>
           <div class="product-buttons">
-            <a href="https://atalayaworkshop.myshopify.com/products/daggerheart%E2%84%A2-compatible-condition-rings-all-conditions-from-the-manual" target="_blank" class="product-button">Get yours now here</a>
-            <a href="https://www.etsy.com/listing/4414722765" target="_blank" class="product-button-lower">Alternative on Etsy</a>
+            <a href="https://atalayaworkshop.myshopify.com/products/daggerheart%E2%84%A2-compatible-condition-rings-all-conditions-from-the-manual" target="_blank" class="product-button-primary">Get yours now here!</a>
+            <a href="https://atalayaworkshop.myshopify.com/products/daggerheart%E2%84%A2-compatible-condition-rings-and-case" target="_blank" class="product-button-digital">Models for 3D Printing</a>
+            <a href="https://www.etsy.com/listing/4414722765" target="_blank" class="product-button-etsy">See on Etsy</a>
           </div>
         </div>
       </div>
@@ -196,7 +232,7 @@
         <div class="product-content">
           <h3>Custom Litophany Cube</h3>
           <p>A cube lamp with custom photos displayed as litophanies in each face.</p>
-          <a target="_blank" class="product-button">Coming soon!</a>
+          <a target="_blank" class="product-button-primary">Coming soon!</a>
         </div>
       </div>
 
